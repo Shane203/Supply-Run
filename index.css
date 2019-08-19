@@ -1,0 +1,23 @@
+body:not(canvas) {
+   background-image: url("./nebula.jpg");
+   background-size: 100% 100%
+ }
+ 
+ p {
+	color: yellow;
+	text-align: center;
+	font-family: Arial;
+	font-size: 150%;
+ }
+ 
+ canvas {
+        background-color: rgb(0,0,15);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid yellow;
+ }
+ 
+ a:visited {
+	color: white;
+ }

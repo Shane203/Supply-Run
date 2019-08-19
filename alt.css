@@ -1,0 +1,19 @@
+body {
+  background-image: url("Images/nebula.jpg");
+  text-align: center;
+  font-size: 200%
+}
+
+form {
+  color: yellow;
+}
+
+p {
+  color: yellow;
+}
+
+table.center {
+  margin-left:auto;
+  margin-right:auto;
+  color: yellow;
+}
