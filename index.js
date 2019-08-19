@@ -126,9 +126,9 @@
     
     function intro() {
 	canvas = document.querySelector('canvas');
-        context = canvas.getContext('2d');
-        width = canvas.width;
-        height = canvas.height;
+	context = canvas.getContext('2d');
+	width = canvas.width;
+	height = canvas.height;
 	
 	context.textAlign="center"
 	context.fillStyle = "yellow";
@@ -137,21 +137,39 @@
 	context.fillStyle = "white"
 	context.font ="32px Arial";
 	context.fillText("This is you", 100, 150);
-	context.drawImage(player_img, 100, 200, 75, 75);
+	player_img.onload = () => {
+		context.drawImage(player_img, 100, 200, 75, 75);
+	}
 	context.fillText("These are asteroids (bad)", 1000, 150);
-	context.drawImage(asteroid_img, 1000, 200, 80, 80);
+	asteroid_img.onload = () => {
+		context.drawImage(asteroid_img, 1000, 200, 80, 80);
+	}
 	context.fillText("These are supply crates", 190, 350);
-	context.drawImage(points_img, 100, 380, 75, 75);
+	points_img.onload = () => {
+		context.drawImage(points_img, 100, 380, 75, 75);
+	}
 	context.fillText("Power ups:", 100, 600);
 	context.fillText("Asteroid Shield", 400, 700);
 	context.fillText("Speed Boost", 700, 700);
 	context.fillText("Shrink-o-matic", 1000, 700);
-	context.drawImage(shield_img, 300, 570, 75,75);
-	context.drawImage(speed_img, 600, 570, 75,75);
-	context.drawImage(small_img, 900, 570, 75,75);
-	context.drawImage(playerrightgreen_img, 430, 570, 75,75);
-	context.drawImage(playerrightred_img, 730, 570, 75, 75);
-	context.drawImage(playerrightblue_img, 1030, 600, 25, 25);
+	shield_img.onload = () => {
+		context.drawImage(shield_img, 300, 570, 75,75);
+	}
+	speed_img.onload = () => {
+		context.drawImage(speed_img, 600, 570, 75,75);
+	}
+	small_img.onload = () => {
+		context.drawImage(small_img, 900, 570, 75,75);
+	}
+	playerrightgreen_img.onload = () => {
+		context.drawImage(playerrightgreen_img, 430, 570, 75,75);
+	}
+	playerrightred_img.onload = () => {
+		context.drawImage(playerrightred_img, 730, 570, 75, 75);
+	}
+	playerrightblue_img.onload = () => {
+		context.drawImage(playerrightblue_img, 1030, 600, 25, 25);
+	}
 	context.font="28px Arial"
 	context.fillText("Pick up as many of these as you can and then get to the other side of the screen", 520, 500);
 	context.font="24px Arial"
